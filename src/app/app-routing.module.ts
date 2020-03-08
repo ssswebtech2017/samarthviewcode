@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EnquiryFormComponent } from './enquiry-form/enquiry-form.component';
+import { CourseUXUIComponent } from './course-uxui/course-uxui.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'enquery-form', component: EnquiryFormComponent },
+  { path: 'UX-UI-Designing', component: CourseUXUIComponent }
 ];
 
 @NgModule({
@@ -20,6 +22,7 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     EnquiryFormComponent,
+    CourseUXUIComponent,
   ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -12,12 +12,25 @@ body{
 	padding:80px 0 0 0;
 	font-family:'FuturaPT-Book';
 	font-size: 18px;
+	// letter-spacing: 1.5px;
 }
 b, h1, h2, h3, h4, h5, h6{
 	font-family:'futurastd-bold';
 }
 .content-adust {
-    padding: 30px 0 0 0;
+	padding: 30px 0 0 0;
+	.myCarousel{
+		.carousel-control{
+			height: 40px;
+			width: 40px;
+			font-size: 35px;
+			position: absolute;
+			top: 100px;
+			i{
+				color: #000000;
+			}
+		}
+	}
 }
 // Header
 .custom-navbar {
@@ -54,6 +67,51 @@ b, h1, h2, h3, h4, h5, h6{
 				padding: 5px 0 5px 10px;
 				height: auto;
 				border-bottom: 1px solid #eee;
+			}
+		}
+	}
+}
+// enquery form
+.enquery-form{
+	background-image: url('../images/enquiey.jpg');
+	background-size: cover;
+	height: 100vh;
+	.enquery-form-wrapper{
+		width: 400px;
+		margin: 70px auto 0 auto;
+		.form-group{
+			label{
+				color:#ffffff
+			}
+			.form-control {
+				border-radius: 0 !important;
+				background-color: transparent;
+				color: #fff;
+				height: 50px !important;
+				margin-bottom: 30px;
+			}
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: #fff;
+			  }
+			  ::-moz-placeholder { /* Firefox 19+ */
+				color: #fff;
+			  }
+			  :-ms-input-placeholder { /* IE 10+ */
+				color: #fff;
+			  }
+			  :-moz-placeholder { /* Firefox 18- */
+				color: #fff;
+			  }
+		}
+		.btn-primary{
+			background:#f17f3a;
+			border: none;
+			border-radius: 0;
+			font-size: 20px;
+			padding: 10px 30px;
+			&:hover {
+				background-color: #ffffff;
+				color: #f17f3a;
 			}
 		}
 	}
@@ -159,3 +217,166 @@ b, h1, h2, h3, h4, h5, h6{
 	}
 }
 
+// breadcrum
+.breadcrum{
+	height: 250px;
+	.breadcrum-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.5;
+	}
+	.img-wrapper, .text-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.img-wrapper {
+		z-index: 1;
+		img{
+			max-height: 250px;
+			width: 100%;
+		}
+	}
+	.text-wrapper {
+		z-index: 2;
+		top: 70px;
+		left: 0;
+		p{
+			margin-bottom: 0;
+			font-size: 30px;
+			color: #fff;
+			padding: 20px 0 20px 45px;
+			border-left: 2px solid #000;
+			&::before{
+				content: "";
+				width: 4px;
+				height: 90px;
+				background-color: #f17f3a;
+				position: absolute;
+				left: 20px;
+				top: 0px;
+			}
+		}
+	}
+}
+.custom-tab{
+	.nav{
+		.nav-item{
+			border-radius: 0;
+			margin-right: 3px;
+			border: 1px solid #eee;
+			font-weight: 700;
+			background: #f9f9f9;
+			line-height: 35px;
+			text-align: center;
+			color: #333333;
+			&.active{
+				background-color: #ffffff;
+				border-top: 4px solid #f17f3a;
+				border-bottom: 0;
+			}
+		}
+	}
+	.tab-content {
+		padding: 15px;
+		.heading{
+			margin: 0 0 20px 0;
+		}
+		.custom-accordion {
+			.card-header {
+				padding-bottom: 0;
+				h5 {
+					font-size: 26px;
+					padding-bottom: 0;
+				}
+			}
+		}
+		.timeline-wrapper{
+			.item-wrapper{
+				.has-item{
+					list-style: none;
+					padding: 0 0 0 40px;
+					li{
+						position: relative;
+						padding: 10px 0 10px 0;
+						&::before{
+							content: "";
+							position: absolute;
+							width: 13px;
+							height: 13px;
+							top: 32%;
+							left: -29px;
+							background-color: #777777;
+							z-index: 1;
+							border-radius: 100%;
+						}
+						&::after{
+							content: "";
+							position: absolute;
+							width: 2px;
+							height: 100%;
+							background-color: #777777;
+							top: 0;
+							left: -23px;
+							opacity: 0.2;
+						}
+					}
+				}
+			}
+		}
+		.intructor-details{
+			.photo-wrapper {
+				float: left;
+				width: 150px;
+				img{
+					width: 100%;
+				}
+			}
+			.text-wrapper {
+				padding: 45px 0 0 30px;
+				float: left;
+				h4{
+					margin: 0;
+				}
+			}
+		}
+		.download-list{
+			padding: 0;
+			li{
+				list-style: none;
+				a{
+					color: #f17f3a;
+				}
+			}
+		}
+	}
+}
+.right-content{
+	.all-courses{
+		.heading{
+			line-height: 52px;
+			color: #333333;
+			border-left: 3px solid #f17f3a;
+			padding-left: 15px;
+			margin: 0;
+		}
+		ul{
+			padding: 0;
+			list-style: none;
+			li{
+				a{
+					padding: 5px 0 5px 20px;
+					border-left: 1px solid #999;
+					&:hover{
+						text-decoration: underline;
+						color: #f17f3a;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
